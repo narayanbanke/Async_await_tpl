@@ -11,19 +11,21 @@ namespace BackgroundThread
     {
         static void Main(string[] args)
         {
-            Thread Thread1 = new Thread(function1);
-            Thread1.IsBackground = true;
+            Thread Thread1 = new Thread(function1);//foreground thread bydefault     
+            Thread1.IsBackground = true;//background thread
             Thread1.Start();
-            Console.WriteLine("main thread has existed"  );
+            Console.WriteLine("main thread has gone"  );
             Console.ReadLine();
         }
 
         private static void function1()
         {
             
-                Console.WriteLine("function1 is entered");
+            Console.WriteLine("function1 is entered");
             Console.ReadLine();
+            Thread.Sleep(3000);
             Console.WriteLine("child  thread has existed");
+            Console.ReadLine();
         }
 
         

@@ -27,7 +27,7 @@ namespace Threaddemo
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("function1 is executed" + " " + i);
+                Console.WriteLine("function2 is executed" + " " + i);
             }
         }
     }

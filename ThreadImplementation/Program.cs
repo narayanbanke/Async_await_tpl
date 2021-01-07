@@ -11,9 +11,11 @@ namespace ThreadImplementation
       
             static void Main(string[] args)
             {
-            Thread Thread1 = new Thread(function1);
-            Thread Thread2 = new Thread(function2);
+            Thread Thread1 = new Thread(function1);//signature of calling a function using thread
+            
             Thread1.Start();
+
+            Thread Thread2 = new Thread(function2);
             Thread2.Start();
             Console.ReadLine();
             }
@@ -22,8 +24,8 @@ namespace ThreadImplementation
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    Console.WriteLine("function1 is executed" + " " + i);
-                Thread.Sleep(4000);
+                Console.WriteLine("function1 is executed" + " " + i);
+              Thread.Sleep(4000);
                 }
             }
 
@@ -32,7 +34,7 @@ namespace ThreadImplementation
                 for (int i = 0; i < 10; i++)
                 {
                     Console.WriteLine("function2 is executed" + " " + i);
-                Thread.Sleep(4000);
+              Thread.Sleep(4000);
             }
             }
         }
